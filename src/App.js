@@ -75,7 +75,9 @@ function App() {
     <a target="_blank" href="https://twitter.com/LucidFruits">
       <img src={twitter} style={{margin: 'auto', cursor: 'pointer', width: '4rem'}} />
     </a>
-    <img src={discord} style={{margin: 'auto', cursor: 'pointer', width: '4rem'}} />
+    <a target="_blank" href="https://discord.gg/VWqzwQjE">
+      <img src={discord} style={{margin: 'auto', cursor: 'pointer', width: '4rem'}} />
+    </a>
   </div>
     <img ref={homeRef} id='home' src={storyBoard} style={{ margin: 'auto', display: 'block', paddingTop: '2rem'}} />
     <img src={trf} style={{ margin: 'auto', display: 'block', paddingTop: '5rem'}} />
