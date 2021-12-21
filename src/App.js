@@ -16,7 +16,10 @@ import br from './assets/BackgroundsRarity.png';
 import raHeader from './assets/RARITIES.png';
 import roadmap from './assets/ROADMAP.png';
 import roadmapSection from './assets/ROADMAP_SECTION.png';
+import storyBoard from './assets/Story_board.png';
 import trf from './assets/TRF.png';
+import twitter from './assets/TWITTER.png';
+import discord from './assets/DISCORD.png';
 import { useRef } from 'react';
 
 function App() {
@@ -26,19 +29,32 @@ function App() {
   const faqRef = useRef(null);
 
   const handleHome = () => {
-    homeRef.current.scrollIntoView({ behavior: 'smooth' });
+    window.scrollTo({
+      top: 100,
+      behavior: 'smooth'
+    });
   };
 
   const handleRoadmap = () => {
-    roadmapRef.current.scrollIntoView({ behavior: 'smooth' });
+    //roadmapRef.current.scrollIntoView({ behavior: 'smooth' });
+    window.scrollTo({
+      top: 450,
+      behavior: 'smooth'
+    });
   };
 
   const handleRarity = () => {
-    rarityRef.current.scrollIntoView({ behavior: 'smooth' });
+    window.scrollTo({
+      top: 1900,
+      behavior: 'smooth'
+    });
   };
 
   const handleFaq = () => {
-    faqRef.current.scrollIntoView({ behavior: 'smooth' });
+    window.scrollTo({
+      top: 9850,
+      behavior: 'smooth'
+    });
   };
 
   return (
@@ -48,14 +64,19 @@ function App() {
   <div style={{position: 'fixed', backgroundColor: 'black', width:'100%'}}>
     <img src={logo} style={{margin: 'auto', paddingTop: '2rem', display: 'block', width: '25%'}} />
     <div className="header" style={{ margin: 'auto', display: 'flex', paddingTop: '2rem', paddingBottom: '2rem' }}>
-      <img src={home} style={{margin: 'auto', cursor: 'pointer', width: '5rem'}} />
+      <img onClick={handleHome} src={home} style={{margin: 'auto', cursor: 'pointer', width: '5rem'}} />
       <img onClick={handleRoadmap} src={roadmap} style={{margin: 'auto', cursor: 'pointer', width: '9rem'}} />
       <img onClick={handleRarity} src={rarity} style={{margin: 'auto', cursor: 'pointer', width: '8rem'}} />
       <img onClick={handleFaq} src={faq} style={{margin: 'auto', cursor: 'pointer', width: '4rem'}} />
     </div>
   </div>
 
-    <img src={trf} style={{ margin: 'auto', display: 'block', paddingTop: '20%' }} />
+  <div style={{margin: 'auto', justifyContent: 'space-around', display: 'flex', paddingTop: '15%', width: 300}}>
+    <img src={twitter} style={{margin: 'auto', cursor: 'pointer', width: '4rem'}} />
+    <img src={discord} style={{margin: 'auto', cursor: 'pointer', width: '4rem'}} />
+  </div>
+    <img ref={homeRef} id='home' src={storyBoard} style={{ margin: 'auto', display: 'block', paddingTop: '2rem'}} />
+    <img src={trf} style={{ margin: 'auto', display: 'block', paddingTop: '5rem'}} />
     <img ref={roadmapRef} id='roadmap' src={roadmapSection} style={{ margin: 'auto', display: 'block', paddingTop: '5rem' }} />
     <img ref={rarityRef} id='raHeader' src={raHeader} style={{ margin: 'auto', display: 'block', paddingTop: '5rem' }} />
     <img src={br} style={{ margin: 'auto', display: 'block', paddingTop: '5rem' }} />
