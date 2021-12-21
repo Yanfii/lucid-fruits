@@ -72,7 +72,9 @@ function App() {
   </div>
 
   <div style={{margin: 'auto', justifyContent: 'space-around', display: 'flex', paddingTop: '15%', width: 300}}>
-    <img src={twitter} style={{margin: 'auto', cursor: 'pointer', width: '4rem'}} />
+    <a target="_blank" href="https://twitter.com/LucidFruits">
+      <img src={twitter} style={{margin: 'auto', cursor: 'pointer', width: '4rem'}} />
+    </a>
     <img src={discord} style={{margin: 'auto', cursor: 'pointer', width: '4rem'}} />
   </div>
     <img ref={homeRef} id='home' src={storyBoard} style={{ margin: 'auto', display: 'block', paddingTop: '2rem'}} />
